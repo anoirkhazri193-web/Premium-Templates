@@ -45,14 +45,12 @@ function Demo() {
         </p>
 
 
-        <a
-          href={template.demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="open-demo"
-        >
-          Open Demo Website
-        </a>
+<a
+  href={template.demo}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="open-demo"
+>
 
 
       </div>
