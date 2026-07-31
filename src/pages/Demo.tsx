@@ -46,11 +46,13 @@ function Demo() {
 
 
 <a
-  href={template.demo}
+  href={template.demo || "#"}
   target="_blank"
   rel="noopener noreferrer"
   className="open-demo"
 >
+  Open Demo Website
+</a>
 
 
       </div>
