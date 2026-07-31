@@ -42,7 +42,7 @@ function Navbar() {
           to="/templates" 
           className="nav-btn"
         >
-          Browse Templates
+          Browse manoucha
         </Link>
 
 
