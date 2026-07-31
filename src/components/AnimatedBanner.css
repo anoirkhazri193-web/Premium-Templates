@@ -1,0 +1,19 @@
+.animated-banner {
+
+  height:100px;
+
+  width:100%;
+
+  background:red;
+
+  color:white;
+
+  font-size:40px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}

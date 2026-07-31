@@ -1,0 +1,49 @@
+.announcement {
+
+  width:100%;
+
+  height:80px;
+
+  background:#111827;
+
+  overflow:hidden;
+
+  display:flex;
+
+  align-items:center;
+
+}
+
+
+.announcement-text {
+
+  color:white;
+
+  font-size:32px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+
+  animation:moveText 15s linear infinite;
+
+}
+
+
+
+@keyframes moveText {
+
+  from {
+
+    transform:translateX(100%);
+
+  }
+
+
+  to {
+
+    transform:translateX(-100%);
+
+  }
+
+}

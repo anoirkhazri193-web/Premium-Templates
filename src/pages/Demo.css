@@ -1,0 +1,69 @@
+.demo-page {
+
+  max-width:1200px;
+
+  margin:80px auto;
+
+  padding:20px;
+
+  text-align:center;
+
+}
+
+
+.demo-page h1 {
+
+  font-size:40px;
+
+  margin-bottom:40px;
+
+}
+
+
+.demo-box {
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+
+.demo-box img {
+
+  width:100%;
+
+  max-width:800px;
+
+  border-radius:15px;
+
+}.iframe-container {
+
+  width:100%;
+
+  height:700px;
+
+  margin-top:40px;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+.iframe-container iframe {
+
+  width:100%;
+
+  height:100%;
+
+  border:none;
+
+}
