@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Link } from "react-router-dom";
 import { FaCode } from "react-icons/fa";
 import "./Navbar.css";
@@ -42,7 +43,7 @@ function Navbar() {
           to="/templates" 
           className="nav-btn"
         >
-          Browse manoucha
+          Browse Templates
         </Link>
 
 

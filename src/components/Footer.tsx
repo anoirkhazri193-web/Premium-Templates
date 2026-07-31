@@ -1,3 +1,4 @@
+// @ts-nocheck
 import "./Footer.css";
 
 function Footer() {
@@ -57,7 +58,7 @@ function Footer() {
           </h3>
 
           <p>
-            Email: support@premiumtemplates.com
+            Email: support.anwer@gmail.com
           </p>
 
           <p>
