@@ -1,125 +1,161 @@
-.hero {
-
-  min-height:600px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  text-align:center;
-
-  padding:40px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #2563eb,
-    #1e40af
-  );
-
-  color:white;
-
+/* General Home Page Styles */
+.home-page {
+  font-family: 'Poppins', sans-serif; /* Font mta3 style a9wa */
+  color: #1e293b;
+  overflow-x: hidden;
 }
 
-
-
-.hero h1 {
-
-  font-size:55px;
-
-  margin-bottom:20px;
-
+/* Hero Section WOW Styles */
+.hero-section-wow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh; /* Akbar chwaya */
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%); /* Backgroundgradient mazyen */
+  position: relative;
 }
 
-
-
-.hero p {
-
-  font-size:20px;
-
-  max-width:600px;
-
-  margin:auto;
-
-  margin-bottom:35px;
-
+.hero-content-wow {
+  max-width: 900px;
+  z-index: 2;
 }
 
-
-
-.hero-btn {
-
-  display:inline-block;
-
-  background:white;
-
-  color:#2563eb;
-
-  padding:15px 35px;
-
-  border-radius:10px;
-
-  text-decoration:none;
-
-  font-weight:700;
-
+.hero-badge-wow {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-
-
-.advantages {
-
-  max-width:1100px;
-
-  margin:70px auto;
-
-  padding:20px;
-
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:30px;
-
+.hero-title-wow {
+  font-size: 4.5rem; /* Title a9wa fel kbar */
+  font-weight: 900; /* Bold barcha */
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: #0f172a;
+  letter-spacing: -1px;
 }
 
-
-
-.advantages div {
-
-  padding:30px;
-
-  background:#f8fafc;
-
-  border-radius:15px;
-
+.hero-title-wow .highlight-wow {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-
-
-.advantages h3 {
-
-  color:#2563eb;
-
+.hero-description-wow {
+  font-size: 1.5rem; /* Description awda7 */
+  color: #475569;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.hero-buttons-wow {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
 
+.btn-wow {
+  padding: 1rem 2.5rem;
+  border-radius: 12px; /* Bords arrondis akthar */
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
 
-@media(max-width:768px){
+.btn-primary-wow {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 10px 20px -10px rgba(37, 99, 235, 0.7);
+}
 
-  .hero h1 {
+.btn-primary-wow:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px -10px rgba(37, 99, 235, 0.8);
+}
 
-    font-size:35px;
+.btn-secondary-wow {
+  background-color: white;
+  color: #1e293b;
+  border: 2px solid #e2e8f0;
+}
 
+.btn-secondary-wow:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+}
+
+/* Animations WOW */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
-
-
-  .advantages {
-
-    grid-template-columns:1fr;
-
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 0; /* Yebda m5abbi */
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title-wow {
+    font-size: 3rem;
+  }
+  .hero-description-wow {
+    font-size: 1.2rem;
+  }
+  .hero-buttons-wow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-wow {
+    width: 100%;
+  }
 }

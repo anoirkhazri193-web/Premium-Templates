@@ -1,59 +1,37 @@
-.search-bar {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 
-  width:100%;
-
-  max-width:500px;
-
-  display:block;
-
-  margin:30px auto 50px;
-
-  padding:15px 20px;
-
-  border-radius:12px;
-
-  border:1px solid #ddd;
-
-  font-size:16px;
-
-  outline:none;
-
+/* Container bch yjib el search fel wasat */
+.templates-search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
 }
 
-
-.search-bar:focus {
-
-  border-color:#2563eb;
-
-}.templates-container {
-
-  display:grid;
-
-  grid-template-columns:repeat(3, 1fr);
-
-  gap:30px;
-
-  max-width:1200px;
-
-  margin:auto;
-
-}@media(max-width:900px){
-
-  .templates-container {
-
-    grid-template-columns:repeat(2, 1fr);
-
-  }
-
+/* El Search Bar Wahadha: Twila w fel wasat w mzyena */
+.templates-search-input {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 650px;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 50px;
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
 
+.templates-search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
 
-@media(max-width:600px){
-
-  .templates-container {
-
-    grid-template-columns:1fr;
-
-  }
-
+.templates-search-input::placeholder {
+  color: #94a3b8;
+  font-weight: 600;
 }
