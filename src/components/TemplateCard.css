@@ -1,20 +1,22 @@
 .template-card {
   width: 320px;
   background: white;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .template-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .template-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .template-content {
@@ -22,111 +24,34 @@
 }
 
 .template-content h2 {
+  font-size: 24px;
   margin-bottom: 10px;
-  font-size: 22px;
 }
 
 .template-content p {
-  color: #666;
+  color: #6b7280;
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .template-content strong {
   display: block;
-  font-size: 20px;
-  margin-bottom: 15px;
+  color: #2563eb;
+  font-size: 22px;
+  margin: 20px 0;
 }
 
 .template-content a {
   display: inline-block;
-  padding: 10px 18px;
   background: #2563eb;
   color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .template-content a:hover {
   background: #1d4ed8;
-}.template-card {
-
-  background:white;
-
-  border-radius:20px;
-
-  overflow:hidden;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-  transition:0.3s;
-
-}
-
-
-.template-card:hover {
-
-  transform:translateY(-10px);
-
-}
-
-
-.template-card img {
-
-  width:100%;
-
-  height:220px;
-
-  object-fit:cover;
-
-}
-
-
-.template-card h2 {
-
-  font-size:24px;
-
-  margin:20px;
-
-}
-
-
-.template-card p {
-
-  margin:10px 20px;
-
-  color:#6b7280;
-
-}
-
-
-.template-card strong {
-
-  display:block;
-
-  margin:20px;
-
-  color:#2563eb;
-
-  font-size:22px;
-
-}
-
-
-.template-card a {
-
-  display:inline-block;
-
-  margin:0 20px 25px;
-
-  background:#2563eb;
-
-  color:white;
-
-  padding:12px 25px;
-
-  border-radius:10px;
-
-  text-decoration:none;
-
+  transform: scale(1.05);
 }

@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -15,12 +15,12 @@ function Navbar() {
           <span className="logo-text">Premium Templates</span>
         </Link>
 
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/templates">Templates</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+<nav className="nav-links">
+  <Link to="/" className="nav-item">Home</Link>
+  <Link to="/templates" className="nav-item">Templates</Link>
+  <Link to="/about" className="nav-item">About</Link>
+  <Link to="/contact" className="nav-item">Contact</Link>
+</nav>
 
         <Link to="/templates" className="nav-btn">
           Browse Templates

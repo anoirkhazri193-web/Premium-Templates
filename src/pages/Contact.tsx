@@ -1,12 +1,12 @@
-// @ts-nocheck
-import React, { useState } from "react";
+
+import React, { useState, type FormEvent, type ChangeEvent } from "react";
 import "./Contact.css"; // Bch nzidou el CSS mta3ha
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
     // Houni tnajm tzid el logique ken t7eb tab3ath data wela API
@@ -70,7 +70,7 @@ function Contact() {
                 <div className="form-group">
                   <label>Your Message</label>
                   <textarea 
-                    rows="5" 
+                    rows={5}
                     required 
                     placeholder="Write your message here..."
                     value={formData.message}

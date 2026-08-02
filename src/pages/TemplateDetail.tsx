@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import { useParams, Link } from "react-router-dom";
 import { templates } from "../data/templates";
 import "./TemplateDetail.css";
@@ -31,7 +31,9 @@ function TemplateDetail() {
             src={template.image}
             alt={template.title}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            onError={(e) => { e.target.style.display = 'none'; }}
+            onError={(e) => {
+  e.currentTarget.style.display = "none";
+}}
           />
         </div>
       </div>

@@ -18,7 +18,8 @@
   justify-content: space-between;
 }
 
-/* Logo Styles */
+
+/* Logo */
 .logo-styled {
   display: flex;
   align-items: center;
@@ -54,40 +55,94 @@
   letter-spacing: -0.5px;
 }
 
-/* Nav Links & Button Styles */
+
+/* Navigation */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.nav-links a {
+.nav-links .nav-item {
+  padding: 10px 16px;
+  color: #334155;
   text-decoration: none;
-  color: #475569;
-  font-weight: 500;
-  transition: color 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #2563eb;
+.nav-links .nav-item:hover {
+  background-color: #2563eb;
+  color: white;
+  transform: scale(1.08);
 }
 
+
+/* Browse Templates Button */
 .nav-btn {
   background-color: #2563eb;
   color: white;
-  padding: 0.5rem 1.25rem;
-  border-radius: 6px;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
   background-color: #1d4ed8;
+  transform: translateY(-2px);
 }
 
+
+/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
+  .navbar-container {
+    padding: 1rem;
+  }
+}a {
+  text-decoration: none;
+}.nav-links .nav-item {
+  padding: 10px 16px;
+  color: #334155 !important;
+  text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nav-links .nav-item:hover {
+  background-color: #2563eb !important;
+  color: #631919 !important;
+  transform: scale(1.1);
+}/* Navbar hover effect */
+.nav-links .nav-item {
+  position: relative;
+  padding: 10px 18px;
+  color: #334155;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nav-links .nav-item:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.12);
 }

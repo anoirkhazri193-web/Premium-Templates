@@ -1,8 +1,9 @@
-// @ts-nocheck
+
 import { useParams, Link } from "react-router-dom";
 import { templates } from "../data/templates";
 import { useState } from "react";
 
+import type { FormEvent } from "react";
 function Checkout() {
   const { id } = useParams();
   const [submitted, setSubmitted] = useState(false);
@@ -10,7 +11,7 @@ function Checkout() {
   // Nlawojo 3al template b id bch naɛrfou ech chra
   const template = templates.find((item) => item.id === id);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
   };
