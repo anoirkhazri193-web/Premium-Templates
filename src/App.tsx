@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Templates from "./pages/Templates";
@@ -16,6 +17,9 @@ import Success from "./pages/Success";
 function App() {
   return (
     <BrowserRouter>
+
+      <ScrollToTop />
+
       <Navbar />
 
       <Routes>
@@ -37,6 +41,7 @@ function App() {
       </Routes>
 
       <Footer />
+
     </BrowserRouter>
   );
 }

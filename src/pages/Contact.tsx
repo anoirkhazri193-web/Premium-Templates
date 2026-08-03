@@ -1,84 +1,143 @@
-
-import React, { useState, type FormEvent, type ChangeEvent } from "react";
-import "./Contact.css"; // Bch nzidou el CSS mta3ha
+import emailjs from "@emailjs/browser";
+import React, { useState, type FormEvent } from "react";
+import "./Contact.css";
 
 function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Houni tnajm tzid el logique ken t7eb tab3ath data wela API
+
+    try {
+      await emailjs.send(
+        "service_1gnhczn",
+        "template_76473t5",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "7xqvSr86SYtVP-Qnl"
+      );
+
+      setSubmitted(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error: any) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message");
+    }
   };
 
   return (
     <div className="contact-page">
       <div className="contact-container">
         <div className="contact-header">
-          <h1>Get in <span className="highlight">Touch</span></h1>
-          <p>Have questions about our templates or need custom design work? Drop us a message!</p>
+          <h1>
+            Get in <span className="highlight">Touch</span>
+          </h1>
+
+          <p>
+            Have questions about our templates or need custom design work?
+            Drop us a message!
+          </p>
         </div>
 
         <div className="contact-grid">
-          {/* Info mtaç el contact */}
           <div className="contact-info">
             <h3>Let's talk business</h3>
-            <p>We are here to help you build high-performing web applications faster. Reach out to our team anytime.</p>
-            
+
+            <p>
+              We are here to help you build high-performing web applications
+              faster. Reach out to our team anytime.
+            </p>
+
             <div className="info-item">
               <span className="icon">📧</span>
               <span>support.anwer@gmail.com</span>
             </div>
+
             <div className="info-item">
               <span className="icon">📍</span>
               <span>Tunis, Tunisia</span>
             </div>
           </div>
 
-          {/* Formulaire mtaç el contact */}
           <form className="contact-form" onSubmit={handleSubmit}>
             {submitted ? (
               <div className="success-message">
                 <h3>Thank you! 🎉</h3>
-                <p>Your message has been sent successfully. We will get back to you soon.</p>
+                <p>
+                  Your message has been sent successfully. We will get back to
+                  you soon.
+                </p>
               </div>
             ) : (
               <>
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input 
-                    type="text" 
-                    required 
+
+                  <input
+                    type="text"
+                    required
                     placeholder="John Doe"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        name: e.target.value,
+                      })
+                    }
                   />
                 </div>
 
                 <div className="form-group">
                   <label>Your Email</label>
-                  <input 
-                    type="email" 
-                    required 
+
+                  <input
+                    type="email"
+                    required
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        email: e.target.value,
+                      })
+                    }
                   />
                 </div>
 
                 <div className="form-group">
                   <label>Your Message</label>
-                  <textarea 
+
+                  <textarea
                     rows={5}
-                    required 
+                    required
                     placeholder="Write your message here..."
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  ></textarea>
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        message: e.target.value,
+                      })
+                    }
+                  />
                 </div>
 
-                <button type="submit" className="submit-btn">Send Message</button>
+                <button type="submit" className="submit-btn">
+                  Send Message
+                </button>
               </>
             )}
           </form>
