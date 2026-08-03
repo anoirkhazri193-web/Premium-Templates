@@ -11,19 +11,28 @@ import Contact from "./pages/Contact";
 import TemplateDetail from "./pages/TemplateDetail";
 import Demo from "./pages/Demo";
 import Checkout from "./pages/Checkout";
+import Success from "./pages/Success";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/templates" element={<Templates />} />
+
         <Route path="/templates/:id" element={<TemplateDetail />} />
+
         <Route path="/demo/:id" element={<Demo />} />
+
         <Route path="/checkout/:id" element={<Checkout />} />
+
+        <Route path="/success/:id" element={<Success />} />
+
         <Route path="/about" element={<About />} />
+
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

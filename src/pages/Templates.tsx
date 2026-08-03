@@ -118,21 +118,21 @@ function Templates() {
             </div>
 
             <div style={{ padding: "0 1.5rem 1.5rem 1.5rem" }}>
-              <Link
-                to={`/templates/${template.id}`}
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  backgroundColor: "#2563eb",
-                  color: "white",
-                  padding: "0.6rem 1rem",
-                  borderRadius: "6px",
-                  textDecoration: "none",
-                  fontWeight: "600",
-                }}
-              >
-                Buy Now
-              </Link>
+<Link
+  to={`/checkout/${template.id}?name=${encodeURIComponent(template.title)}&price=${template.price.replace("$","")}`}
+  style={{
+    display: "block",
+    textAlign: "center",
+    backgroundColor: "#2563eb",
+    color: "white",
+    padding: "0.6rem 1rem",
+    borderRadius: "6px",
+    textDecoration: "none",
+    fontWeight: "600",
+  }}
+>
+  Buy Now
+</Link>
             </div>
 
           </div>

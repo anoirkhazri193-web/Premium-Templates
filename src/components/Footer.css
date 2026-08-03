@@ -110,4 +110,21 @@
 
   }
 
+}.discord-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #5865F2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.discord-link svg {
+  font-size: 22px;
+}
+
+.discord-link:hover {
+  color: #7289DA;
 }

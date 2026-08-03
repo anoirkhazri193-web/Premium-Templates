@@ -1,11 +1,11 @@
 // @ts-nocheck
 import "./Footer.css";
+import { FaDiscord } from "react-icons/fa";
 
 function Footer() {
 
   return (
     <footer className="footer">
-
 
       <div className="footer-container">
 
@@ -64,6 +64,17 @@ function Footer() {
           <p>
             Available 24/7 Support
           </p>
+
+<a
+  href="https://discord.gg/fRnPPhv7XF"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="discord-link"
+>
+  <FaDiscord className="discord-icon" />
+  Join our Discord Community
+</a>
+
 
         </div>
 
